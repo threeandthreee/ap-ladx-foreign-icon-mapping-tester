@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>AP LADX Foreign Icon Mapping Test</title>
+        <script type="text/javascript" src="mapping.js"></script>
+        <script type="text/javascript" src="script.js"></script>
+    </head>
+    <body>
+        <h3>AP LADX Foreign Icon Mapping Test</h3>
+        <hr/>
+        <h4>Check single item</h4>
+        <label for="game">Game Name</label>
+        <input type="text" id="game" name="game" placeholder="optional"><br/>
+        <label for="item">Item Name</label>
+        <input type="text" id="item" name="item"><br/>
+        <button onclick="checkSingle()">See Match</button>
+        <input type="text" id="singleMatch" name="singleMatch" readonly><br/>
+        <br/>
+        <hr/>
+        <h4>Check datapackage</h4>
+        <label for="datapackage">Datapackage entry</label><br/>
+        <textarea id="datapackage" cols=50 placeholder='"<Game Name>": { ... }'></textarea><br/>
+        <button onclick="checkDatapackage()">See Matches</button><br/>
+        <br/>
+        <textarea id="datapackageMatch" cols=50 rows=10 readonly></textarea><br/>
+        <br/>
+        <hr/>
+        <h4>Mapping</h4>
+        <label for="currentMapping">Current Mapping (you can edit)</label><br/>
+        <textarea id="currentMapping" cols=50 rows=10></textarea><br/>
+        <button onclick="update()">Update</button>
+        <button onclick="reset()">Reset</button>
+        <p style="color:red" id="errorText"></p>
+    </body>
+</html>
